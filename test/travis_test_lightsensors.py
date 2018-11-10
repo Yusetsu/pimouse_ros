@@ -1,7 +1,7 @@
 #!/usr/bin/env/pithon
 #encoding: utf8
 import unittest,rostest
-import rotnode,rospy
+import rosnode,rospy
 import time
 from pimouse_ros.msg import LightSensorValues
 
