@@ -14,7 +14,7 @@ def get_freq():
 	return f
 
 if __name__=='__main__':
-	devfile='/dev/rtlightsensor0'
+	devfile = "/dev/rtlightsensor0"
 	rospy.init_node('lightsensors')
 	pub = rospy.Publisher('lightsensors',LightSensorValues,queue_size=1)
 
@@ -29,7 +29,7 @@ if __name__=='__main__':
 				d.right_forward = data[0]
 				d.right_side=data[1]
 				d.left_side=data[2]
-				d.left_forward[3]
+				d.left_forward=data[3]
 				d.sum_all=sum(data)
 				d.sum_forward=data[0]+data[3]
 				pub.publish(d)
