@@ -12,11 +12,11 @@ class MotorTest(unittest.TestCase):
 			self.assertEqual(f.readline(),str(value)+"\n",message)
 
 	def test_node_exist(self):
-		nodes = rosnode.get_node_namese()
+		nodes = rosnode.get_node_names()
 		self.assertIn('/motors',nodes,"node does not exist")
 
 	def test_put_freq(self):
-		pub = rospy.Publisher('/motors_raw',MotorsFreqs)
+		pub = rospy.Publisher('/motors_raw',MotorFreqs)
 		m = MotorFreqs()
 		m.left_hz=123
 		m.right_hz=456
