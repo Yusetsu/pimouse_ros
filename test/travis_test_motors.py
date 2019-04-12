@@ -1,1 +1,1 @@
-travis_test_motor.py
+travis_test_motors2.py
