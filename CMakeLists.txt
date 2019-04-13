@@ -55,11 +55,9 @@ find_package(catkin REQUIRED COMPONENTS
  )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   TimedMotion.srv
-#   Service1.srv
-#   Service2.srv
+ add_service_files(
+   FILES
+   TimedMotion.srv
  )
 
 ## Generate actions in the 'action' folder
