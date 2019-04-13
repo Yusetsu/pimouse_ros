@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
-  std_srvs
+#  std_srvs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pimouse_ros
-   CATKIN_DEPENDS rospy std_msgs message_runtime std_srvs
+   CATKIN_DEPENDS rospy std_msgs message_runtime #std_srvs
 #  DEPENDS system_lib
 )
 
