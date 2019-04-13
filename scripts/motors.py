@@ -17,7 +17,7 @@ class Motor():
 		self.srv_off = rospy.Service('motor_off',Trigger,self.callback_off)
 		self.last_time=rospy.Time.now()
 		self.using_cmd_vel=False
-		self.srv_tm = rospy.Service('timed_motion',TimedMotion,self,callback_tm)
+		self.srv_tm = rospy.Service('timed_motion',TimedMotion,self.callback_tm)
 
 	def set_power(self,onoff=False):
 		en="/dev/rtmotoren0"
@@ -81,7 +81,7 @@ class Motor():
 
 if __name__=='__main__':
 	rospy.init_node('motors')
-	m=Motor()
+	m = Motor()
 
 	rate=rospy.Rate(10)
 	while not rospy.is_shutdown():
